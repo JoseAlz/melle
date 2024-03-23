@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div class="container">
+      <a href="/new" class="new-message-link">New message!</a>
+      <p>Welcome to <%= title %></p>
+      <div class="content">
+          <% messages.forEach((item) => { %>
+            <div class="message">
+              <h2><%=item.text%></h2>
+              <p><%=item.user%></p>
+              <p class="meta"><%=item.added%></p>
+              <br>
+            </div>
+          <% }); %>
+      </div>
+      <a href="https://github.com/JoseAlz" target="_blank">  <span class="fa fa-github-square" style="font-size:48px; color:#9400FF; padding:10px;"></span></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/boot"></script>
+  </body>
+</html>
